@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+#define TamMAX 5
 
 //estrutura  
 struct territorios{
@@ -28,12 +28,12 @@ int main(){
     switch (Escolha)
     {
     case 1:
-    struct territorios paises[5];//cria o vetor paises
+    struct territorios paises[TamMAX];//cria o vetor paises
 
         // estrutura para cadastro
         printf("Vamos cadastrar os 5 territorios inicias do nosso mundo.\n");
         printf("\n--------------------------------------------------------\n");
-        for ( int i = 0; i < 5; i++)
+        for ( int i = 0; i < TamMAX; i++)
         {
             printf("Digite o nome:");
             scanf("%s", &paises[i].nome);
@@ -52,7 +52,7 @@ int main(){
         
         }
         // estrtura para printar no terminal
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < TamMAX; i++)
         {
             printf("país %d \n", i+1);
             printf("nome: %s \n",paises[i].nome);
