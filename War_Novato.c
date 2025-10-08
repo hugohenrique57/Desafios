@@ -9,8 +9,7 @@
 
 
 //estrutura  
-struct territorios
-{
+struct territorios{
     char nome[30];
     char cor[10];
     int tropas;
@@ -18,8 +17,7 @@ struct territorios
 
 int main(){
     int Escolha;
-    int TotalPaises;
-    
+    // menu
     printf("---Bem Vindo ao jogo war---\n");
     printf("Escolha uma das Opcoes abaixo\n");
     printf("(1) JOGAR\n");
@@ -30,36 +28,39 @@ int main(){
     switch (Escolha)
     {
     case 1:
+    struct territorios paises[5];//cria o vetor paises
+
+        // estrutura para cadastro
         printf("Vamos cadastrar os 5 territorios inicias do nosso mundo.\n");
-        printf("--------------------------------------------------------");
+        printf("\n--------------------------------------------------------\n");
         for ( int i = 0; i < 5; i++)
         {
-        struct territorios paises; 
             printf("Digite o nome:");
-            scanf("%s", &paises.nome);
+            scanf("%s", &paises[i].nome);
 
             printf("\n");
 
             printf("Digite a Cor:");
-            scanf("%s" , &paises.cor);
+            scanf("%s" , &paises[i].cor);
 
             printf("\n");
 
             printf("Digite o numero de tropas:");
-            scanf("%d", &paises.tropas);
+            scanf("%d", &paises[i].tropas);
+            
+            printf("\n--------------------------------------------------------\n");
         
         }
-        
+        // estrtura para printar no terminal
         for (int i = 0; i < 5; i++)
         {
-            printf("paise %d \n", i+1);
-            printf("")
-            printf("")
-            printf("")
+            printf("país %d \n", i+1);
+            printf("nome: %s \n",paises[i].nome);
+            printf("cor: %s \n",paises[i].cor );
+            printf("tropas %d \n",paises[i].tropas );
+            printf("\n--------------------------------------------------------\n");
         }
         
-    
-         
         break;
     case 2:
         printf("...\n");
@@ -71,15 +72,6 @@ int main(){
         printf("Opcao Invalida!\n");
         break;
     }
-
-
-
-
-
-
-
-
-
 
 
     return 0;
