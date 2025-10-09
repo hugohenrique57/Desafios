@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TamMAX 5
+#define TamMAX 2
 
 //estrutura  
 struct territorios{
@@ -28,25 +28,25 @@ int main(){
     switch (Escolha)
     {
     case 1:
-    struct territorios paises[TamMAX];//cria o vetor paises
+    struct territorios times[TamMAX];//cria o vetor paises
 
         // estrutura para cadastro
         printf("Vamos cadastrar os 5 territorios inicias do nosso mundo.\n");
         printf("\n--------------------------------------------------------\n");
         for ( int i = 0; i < TamMAX; i++)
         {
-            printf("Digite o nome:");
-            scanf("%s", &paises[i].nome);
+            printf("Digite o nome: ");
+            scanf("%s", &times[i].nome);
 
             printf("\n");
 
-            printf("Digite a Cor:");
-            scanf("%s" , &paises[i].cor);
+            printf("Digite a Cor do exercito: ");
+            scanf("%s" , &times[i].cor);
 
             printf("\n");
 
-            printf("Digite o numero de tropas:");
-            scanf("%d", &paises[i].tropas);
+            printf("Digite o numero de tropas: ");
+            scanf("%d", &times[i].tropas);
             
             printf("\n--------------------------------------------------------\n");
         
@@ -54,10 +54,10 @@ int main(){
         // estrtura para printar no terminal
         for (int i = 0; i < TamMAX; i++)
         {
-            printf("país %d \n", i+1);
-            printf("nome: %s \n",paises[i].nome);
-            printf("cor: %s \n",paises[i].cor );
-            printf("tropas %d \n",paises[i].tropas );
+            printf("TERRITORIO %d: \n", i+1);
+            printf("  - Nome: %s \n",times[i].nome);
+            printf("  - Cor do exercito: %s \n",times[i].cor );
+            printf("  - Tropas %d \n",times[i].tropas );
             printf("\n--------------------------------------------------------\n");
         }
         
