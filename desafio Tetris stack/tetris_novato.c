@@ -115,7 +115,7 @@ int main(){
         printf("A fila está cheia, não é possível inserir nova peça!\n");
     } else {
         pecas nova;
-        printf("Digite o nome da peça: ");
+        printf("Digite o nome da peça, ex(I,O,L,T): ");
         scanf("%s", nova.nome);
         printf("Digite o ID da peça: ");
         scanf("%d", &nova.id);
