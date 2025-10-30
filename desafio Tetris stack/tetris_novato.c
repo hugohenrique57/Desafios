@@ -80,16 +80,8 @@ int main(){
 
     pecas escolhida;
 
-    //adcionando pecas inicias manualmente 
-    pecas p1 = {"I",0};
-    pecas p2 = {"O",1};
-    pecas p3 = {"T",2};
-    pecas p4 = {"L",3};
-    inserir(&f,p1);
-    inserir(&f,p2);
-    inserir(&f,p3);  
-    inserir(&f,p4); 
-
+    srand(time(NULL));
+  
 
     do {
         
@@ -105,10 +97,17 @@ int main(){
     switch (menu)
     {
     case 1://opcao jogar peca
+        pecas nova;
+        char nomes[4][5] = {"I", "O", "T", "L"};
+        int idNovo = rand() % 100;  // gera id aleatório
+        strcpy(nova.nome, nomes[rand() % 4]); // sorteia nome
+        nova.id = idNovo;
 
+        inserir(&f, nova);
         remover(&f,&escolhida);
         printf("Peça escolhida: [%s, %d]\n", escolhida.nome, escolhida.id);
         
+   
         break;
     case 2: //opcao adcionar peca
         if (filaCheia(&f)) {
