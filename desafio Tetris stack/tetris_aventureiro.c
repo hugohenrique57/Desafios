@@ -221,3 +221,4 @@ void gerarPeca(pecas *p) {
     p->nome[1] = '\0';
     p->id = proximoID++;
 }
+ 
